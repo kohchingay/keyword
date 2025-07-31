@@ -121,13 +121,13 @@ c = alt.Chart(source).mark_arc(innerRadius=70).encode(
 col1, col2 = st.columns(2)
 
 with col1:
-    if word:
+    if word_1:
         st.dataframe(df, column_config={"Percentage": {"alignment": "center"}}
     )
 
 with col2:
-    if word:
-        st.title(f"{word}")
+    if word_1:
+        st.title(f"{word_1}")
         st.altair_chart(c)
         
 # In[ ]:

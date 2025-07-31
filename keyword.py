@@ -13,9 +13,6 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 
-sblgnt = open("SBLGNT.txt")
-nt_text = sblgnt.read()
-
 st.write("This website refers to the SBL Greek New Testament text available online at sites such as") 
 st.markdown('[https://gntreader.com/?b=MT&c=1&v=1](https://gntreader.com/?b=MT&c=1&v=1)')
 

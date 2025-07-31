@@ -87,7 +87,7 @@ wordcount_Re = Re.count(word_1) + Re.count(word_2) + Re.count(word_3) + Re.count
 wordcount_nt = wordcount_Mt + wordcount_Mk + wordcount_Lk + wordcount_Jn + wordcount_Ac + wordcount_Ro + wordcount_1Co + wordcount_2Co + wordcount_Ga + wordcount_Eph + wordcount_Php + wordcount_Col + wordcount_1Th + wordcount_2Th + wordcount_1Ti + wordcount_2Ti + wordcount_Tit + wordcount_Phm + wordcount_Heb + wordcount_Jas + wordcount_1Pe + wordcount_2Pe + wordcount_1Jn + wordcount_2Jn + wordcount_3Jn + wordcount_Jud + wordcount_Re
 
 if word_1:
-    st.write(f"Number of times {word} appears in the NT is {wordcount_nt}.\n\n")
+    st.write(f"Number of times {word_1} appears in the NT is {wordcount_nt}.\n\n")
 
 df = pd.DataFrame(
     {

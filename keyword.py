@@ -86,6 +86,8 @@ wordcount_Re = Re.count(word_1) + Re.count(word_2) + Re.count(word_3) + Re.count
 
 wordcount_nt = wordcount_Mt + wordcount_Mk + wordcount_Lk + wordcount_Jn + wordcount_Ac + wordcount_Ro + wordcount_1Co + wordcount_2Co + wordcount_Ga + wordcount_Eph + wordcount_Php + wordcount_Col + wordcount_1Th + wordcount_2Th + wordcount_1Ti + wordcount_2Ti + wordcount_Tit + wordcount_Phm + wordcount_Heb + wordcount_Jas + wordcount_1Pe + wordcount_2Pe + wordcount_1Jn + wordcount_2Jn + wordcount_3Jn + wordcount_Jud + wordcount_Re
 
+wordcount_1 = Mt.count(word_1) + Mk.count(word_1) + Lk.count(word_1) + Jn.count(word_1) + Ac.count(word_1) + Ro.count(word_1) + CoA.count(word_1) + CoB.count(word_1) + Ga.count(word_1) + Eph.count(word_1) + Php.count(word_1) + Col.count(word_1) + ThA.count(word_1) + ThB.count(word_1) + TiA.count(word_1) + TiB.count(word_1) + Tit.count(word_1) + Phm.count(word_1) + Heb.count(word_1) + Jas.count(word_1) + PeA.count(word_1) + PeB.count(word_1) + JnA.count(word_1) + JnB.count(word_1) + JnC.count(word_1) + Re.count(word_1) + 
+
 if word_1:
     st.write(f"Number of times {word_1} appears in the NT is {wordcount_nt}.\n\n")
 

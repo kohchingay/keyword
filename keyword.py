@@ -18,15 +18,15 @@ st.markdown('[https://gntreader.com/?b=MT&c=1&v=1](https://gntreader.com/?b=MT&c
 
 word_1 = st.text_input("Copy the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here and hit the 'Enter' button:\n\n\n\n")
 
-word_2 = st.text_input("Copy a **second** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here and hit the 'Enter' button:\n\n\n\n")
+word_2 = st.text_input("Copy a **second** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here **(otherwise input the "&" symbol here)** and hit the 'Enter' button:\n\n\n\n")
 
-word_3 = st.text_input("Copy a **third** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here and hit the 'Enter' button:\n\n\n\n")
+word_3 = st.text_input("Copy a **third** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here **(otherwise input the "&" symbol here)** and hit the 'Enter' button:\n\n\n\n")
 
-word_4 = st.text_input("Copy a **fourth** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here and hit the 'Enter' button:\n\n\n\n")
+word_4 = st.text_input("Copy a **fourth** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here **(otherwise input the "&" symbol here)** and hit the 'Enter' button:\n\n\n\n")
 
-word_5 = st.text_input("Copy a **fifth** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here and hit the 'Enter' button:\n\n\n\n")
+word_5 = st.text_input("Copy a **fifth** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here **(otherwise input the "&" symbol here)** and hit the 'Enter' button:\n\n\n\n")
 
-word_6 = st.text_input("Copy a **sixth** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here and hit the 'Enter' button:\n\n\n\n")
+word_6 = st.text_input("Copy a **sixth** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here **(otherwise input the "&" symbol here)** and hit the 'Enter' button:\n\n\n\n")
 
 Mt = open("1-Mt.txt").read()
 Mk = open("2-Mk.txt").read()

@@ -14,7 +14,7 @@ import streamlit as st
 import numpy as np
 from PIL import Image
 image = Image.open('banner.png')
-st.image(image, caption='SBLNT Keyword Search', width=None, use_column_width="auto")
+st.image(image, caption='SBLNT Keyword Search', width=500)
 
 st.write("This website works on the SBL Greek New Testament text available online at sites such as") 
 st.markdown('[https://www.biblewebapp.com/study/](https://www.biblewebapp.com/study/)')

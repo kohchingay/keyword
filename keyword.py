@@ -15,7 +15,7 @@ import numpy as np
 from PIL import Image
 image = Image.open('banner.png')
 
-resized_image = image.resize(700, 100)
+resized_image = image.resize(width=700, height=100)
 st.image(resized_image, caption='SBLNT Keyword Search')
 
 st.write("This website works on the SBL Greek New Testament text available online at sites such as") 

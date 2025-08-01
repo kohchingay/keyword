@@ -13,22 +13,8 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 
-st.set_page_config(layout="centered") # Custom HTML/CSS for the banner
-custom_html = """
-<div class="banner"> <img src="banner.jpeg" alt="Banner Image"> </div>
-<style>
-    .banner {
-        width: 160%;
-        height: 150px;
-        overflow: hidden;
-    }
-    .banner img {
-        width: 100%;
-        object-fit: cover;
-    }
-</style>
-"""
-st.components.v1.html(custom_html)
+st.set_page_config(layout="centered")
+st.image("banner.jpeg", use_column_width=True)
 
 st.write("This website works on the SBL Greek New Testament text available online at sites such as") 
 st.markdown('[https://www.biblewebapp.com/study/](https://www.biblewebapp.com/study/)')

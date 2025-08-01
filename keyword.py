@@ -94,7 +94,7 @@ Re = open("27-Re.txt").read()
 
 # Display input fields
 for i in range(st.session_state.num_inputs):
-    word = st.text_input(f"Inflection {i+1}", word=st.session_state.input_values[i], key=f"text_input_{i}")
+    word = st.text_input(f"Inflection {i+1}", value=st.session_state.input_values[i], key=f"text_input_{i}")
     st.session_state.input_values[i] = word
 
     if word.strip():

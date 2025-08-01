@@ -18,7 +18,7 @@ st.markdown('[https://www.biblewebapp.com/study/](https://www.biblewebapp.com/st
 
 st.write("Find the Greek word that you would like to work on from https://www.biblewebapp.com/study/ and do the following:") 
 list_items = """
-1. Click on the Greek word and **Find all occurrences**; 
+1. Click on the Greek word and select "**Find all occurrences**"; 
 2. Copy up to 6 inflections of the word that occurred most number of times and paste them individually in each of the boxes below and hit the "Enter" button;
 3. If there are any empty boxes remaining, input the ampersand (&) symbol and hit the "Enter" button.
 """

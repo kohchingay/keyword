@@ -16,7 +16,7 @@ import numpy as np
 st.write("This website works on the SBL Greek New Testament text available online at sites such as") 
 st.markdown('[https://www.biblewebapp.com/study/](https://www.biblewebapp.com/study/)')
 
-st.write("Find the Greek word that you would like to work on from https://www.biblewebapp.com/study/ and do the following:") 
+st.write("Find the Greek word (from SBLNT text) that you would like to work on from https://www.biblewebapp.com/study/ and do the following:") 
 list_items = """
 1. Click on the Greek word and select "**Find all occurrences**"; 
 2. Copy up to 6 inflections of the word that occurred most number of times and paste them individually in each of the boxes below and hit the "Enter" button;
@@ -121,7 +121,7 @@ if word_6:
 wordcount_nt = wordcount_1 + wordcount_2 + wordcount_3 + wordcount_4 + wordcount_5 + wordcount_6
 
 if word_1:
-    st.write(f"Number of times {word_1} appears in the NT is {wordcount_nt}.\n\n")
+    st.write(f"Number of times {word_1} appears in the inflections above in the NT is {wordcount_nt}.\n\n")
 
 df = pd.DataFrame(
     {

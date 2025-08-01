@@ -16,17 +16,14 @@ import numpy as np
 st.write("This website refers to the SBL Greek New Testament text available online at sites such as") 
 st.markdown('[https://www.biblewebapp.com/study/](https://www.biblewebapp.com/study/)')
 
-word_1 = st.text_input("Copy the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here and hit the 'Enter' button:\n\n\n\n")
+st.write("Find the Greek word that you would like to work on from https://www.biblewebapp.com/study/ and do the following: \n(1) Click on the Greek word and choose "Find all occurrences"; \n(2) Copy up to 6 inflections of the word that occurred most number of times and paste them individually in each of the boxes below and hit the "Enter"; \n(3) if there is any empty boxes remaining, input the ampersand (&) symbol and hit the "Enter" button.
 
-word_2 = st.text_input("Copy a **second** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here **(otherwise input the ampersand (&) symbol here)** and hit the 'Enter' button:\n\n\n\n")
-
-word_3 = st.text_input("Copy a **third** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here **(otherwise input the ampersand (&) symbol here)** and hit the 'Enter' button:\n\n\n\n")
-
-word_4 = st.text_input("Copy a **fourth** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here **(otherwise input the ampersand (&) symbol here)** and hit the 'Enter' button:\n\n\n\n")
-
-word_5 = st.text_input("Copy a **fifth** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here **(otherwise input the ampersand (&) symbol here)** and hit the 'Enter' button:\n\n\n\n")
-
-word_6 = st.text_input("Copy a **sixth** form of the word you would like to count from the Greek text (mostly in lower case), \n\npaste it here **(otherwise input the ampersand (&) symbol here)** and hit the 'Enter' button:\n\n\n\n")
+word_1 = st.text_input()
+word_2 = st.text_input()
+word_3 = st.text_input()
+word_4 = st.text_input()
+word_5 = st.text_input()
+word_6 = st.text_input()
 
 Mt = open("1-Mt.txt").read()
 Mk = open("2-Mk.txt").read()

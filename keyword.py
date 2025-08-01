@@ -146,7 +146,7 @@ if st.session_state.input_values[1]:
 import altair as alt
 
 # Prepare your data
-if st.session_state.input_values[1]:
+if st.session_state.input_values[0]:
         source = pd.DataFrame({
             "Book": ["Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],
             "Percentage": [100*wordcount_Mt/wordcount_nt, 100*wordcount_Mk/wordcount_nt, 100*wordcount_Lk/wordcount_nt, 100*wordcount_Jn/wordcount_nt, 100*wordcount_Ac/wordcount_nt, 100*wordcount_Ro/wordcount_nt, 100*wordcount_1Co/wordcount_nt, 100*wordcount_2Co/wordcount_nt, 100*wordcount_Ga/wordcount_nt, 100*wordcount_Eph/wordcount_nt, 100*wordcount_Php/wordcount_nt, 100*wordcount_Col/wordcount_nt, 100*wordcount_1Th/wordcount_nt, 100*wordcount_2Th/wordcount_nt, 100*wordcount_1Ti/wordcount_nt, 100*wordcount_2Ti/wordcount_nt, 100*wordcount_Tit/wordcount_nt, 100*wordcount_Phm/wordcount_nt, 100*wordcount_Heb/wordcount_nt, 100*wordcount_Jas/wordcount_nt, 100*wordcount_1Pe/wordcount_nt, 100*wordcount_2Pe/wordcount_nt, 100*wordcount_1Jn/wordcount_nt, 100*wordcount_2Jn/wordcount_nt, 100*wordcount_3Jn/wordcount_nt, 100*wordcount_Jud/wordcount_nt, 100*wordcount_Re/wordcount_nt]
@@ -167,13 +167,13 @@ if st.session_state.input_values[1]:
 col1, col2 = st.columns(2)
 
 with col1:
-    if st.session_state.input_values[1]:
+    if st.session_state.input_values[0]:
         st.dataframe(df, column_config={"Percentage": {"alignment": "center"}}
     ).set_index('Book')
 
 with col2:
-    if st.session_state.input_values[1]:
-        st.title(f"{input_values[1]}")
+    if st.session_state.input_values[0]:
+        st.title(f"{st.session_state.input_values[0]}")
         st.altair_chart(c)
         
 # In[ ]:

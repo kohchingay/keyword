@@ -64,24 +64,6 @@ wordcount_3Jn = 0
 wordcount_Jud = 0
 wordcount_Re = 0
 
-_="""
-colA, colB, colC = st.columns([2, 2, 2])
-with colA:
-        word_1 = st.text_input("Enter inflection with the highest occurrences")
-with colB:
-        word_2 = st.text_input("Enter inflection with 2nd highest occurrences")
-with colC:
-        word_3 = st.text_input("Enter inflection with 3rd highest occurrences")
-
-colD, colE, colF = st.columns([2, 2, 2])
-with colD:
-        word_4 = st.text_input("Enter inflection with 4th highest occurrences")
-with colE:
-        word_5 = st.text_input("Enter inflection with 5th highest occurrences")
-with colF:
-        word_6 = st.text_input("Enter inflection with 6th highest occurrences")
-"""
-
 Mt = open("1-Mt.txt").read()
 Mk = open("2-Mk.txt").read()
 Lk = open("3-Lk.txt").read()
@@ -109,36 +91,6 @@ JnB = open("24-2Jn.txt").read()
 JnC = open("25-3Jn.txt").read()
 Jud = open("26-Jud.txt").read()
 Re = open("27-Re.txt").read()
-
-_="""
-wordcount_Mt = Mt.count(word_1) + Mt.count(word_2) + Mt.count(word_3) + Mt.count(word_4) + Mt.count(word_5) + Mt.count(word_6)
-wordcount_Mk = Mk.count(word_1) + Mk.count(word_2) + Mk.count(word_3) + Mk.count(word_4) + Mk.count(word_5) + Mk.count(word_6)
-wordcount_Lk = Lk.count(word_1) + Lk.count(word_2) + Lk.count(word_3) + Lk.count(word_4) + Lk.count(word_5) + Lk.count(word_6)
-wordcount_Jn = Jn.count(word_1) + Jn.count(word_2) + Jn.count(word_3) + Jn.count(word_4) + Jn.count(word_5) + Jn.count(word_6)
-wordcount_Ac = Ac.count(word_1) + Ac.count(word_2) + Ac.count(word_3) + Ac.count(word_4) + Ac.count(word_5) + Ac.count(word_6)
-wordcount_Ro = Ro.count(word_1) + Ro.count(word_2) + Ro.count(word_3) + Ro.count(word_4) + Ro.count(word_5) + Ro.count(word_6)
-wordcount_1Co = CoA.count(word_1) + CoA.count(word_2) + CoA.count(word_3) + CoA.count(word_4) + CoA.count(word_5) + CoA.count(word_6)
-wordcount_2Co = CoB.count(word_1) + CoB.count(word_2) + CoB.count(word_3) + CoB.count(word_4) + CoB.count(word_5) + CoB.count(word_6)
-wordcount_Ga = Ga.count(word_1) + Ga.count(word_2) + Ga.count(word_3) + Ga.count(word_4) + Ga.count(word_5) + Ga.count(word_6)
-wordcount_Eph = Eph.count(word_1) + Eph.count(word_2) + Eph.count(word_3) + Eph.count(word_4) + Eph.count(word_5) + Eph.count(word_6)
-wordcount_Php = Php.count(word_1) + Php.count(word_2) + Php.count(word_3) + Php.count(word_4) + Php.count(word_5) + Php.count(word_6)
-wordcount_Col = Col.count(word_1) + Col.count(word_2) + Col.count(word_3) + Col.count(word_4) + Col.count(word_5) + Col.count(word_6)
-wordcount_1Th = ThA.count(word_1) + ThA.count(word_2) + ThA.count(word_3) + ThA.count(word_4) + ThA.count(word_5) + ThA.count(word_6)
-wordcount_2Th = ThB.count(word_1) + ThB.count(word_2) + ThB.count(word_3) + ThB.count(word_4) + ThB.count(word_5) + ThB.count(word_6)
-wordcount_1Ti = TiA.count(word_1) + TiA.count(word_2) + TiA.count(word_3) + TiA.count(word_4) + TiA.count(word_5) + TiA.count(word_6)
-wordcount_2Ti = TiB.count(word_1) + TiB.count(word_2) + TiB.count(word_3) + TiB.count(word_4) + TiB.count(word_5) + TiB.count(word_6)
-wordcount_Tit = Tit.count(word_1) + Tit.count(word_2) + Tit.count(word_3) + Tit.count(word_4) + Tit.count(word_5) + Tit.count(word_6)
-wordcount_Phm = Phm.count(word_1) + Phm.count(word_2) + Phm.count(word_3) + Phm.count(word_4) + Phm.count(word_5) + Phm.count(word_6)
-wordcount_Heb = Heb.count(word_1) + Heb.count(word_2) + Heb.count(word_3) + Heb.count(word_4) + Heb.count(word_5) + Heb.count(word_6)
-wordcount_Jas = Jas.count(word_1) + Jas.count(word_2) + Jas.count(word_3) + Jas.count(word_4) + Jas.count(word_5) + Jas.count(word_6)
-wordcount_1Pe = PeA.count(word_1) + PeA.count(word_2) + PeA.count(word_3) + PeA.count(word_4) + PeA.count(word_5) + PeA.count(word_6)
-wordcount_2Pe = PeB.count(word_1) + PeB.count(word_2) + PeB.count(word_3) + PeB.count(word_4) + PeB.count(word_5) + PeB.count(word_6)
-wordcount_1Jn = JnA.count(word_1) + JnA.count(word_2) + JnA.count(word_3) + JnA.count(word_4) + JnA.count(word_5) + JnA.count(word_6)
-wordcount_2Jn = JnB.count(word_1) + JnB.count(word_2) + JnB.count(word_3) + JnB.count(word_4) + JnB.count(word_5) + JnB.count(word_6)
-wordcount_3Jn = JnC.count(word_1) + JnC.count(word_2) + JnC.count(word_3) + JnC.count(word_4) + JnC.count(word_5) + JnC.count(word_6)
-wordcount_Jud = Jud.count(word_1) + Jud.count(word_2) + Jud.count(word_3) + Jud.count(word_4) + Jud.count(word_5) + Jud.count(word_6)
-wordcount_Re = Re.count(word_1) + Re.count(word_2) + Re.count(word_3) + Re.count(word_4) + Re.count(word_5) + Re.count(word_6)
-"""
 
 # Display input fields
 for i in range(st.session_state.num_inputs):

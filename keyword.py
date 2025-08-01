@@ -19,7 +19,7 @@ st.markdown('[https://www.biblewebapp.com/study/](https://www.biblewebapp.com/st
 st.write("Find the Greek word (from SBLNT text) that you would like to work on from https://www.biblewebapp.com/study/ and do the following:") 
 list_items = """
 1. Click on the Greek word and select "**Find all occurrences**"; 
-2. Copy as many of the inflections of the word that occurred most number of times and paste them in the box(es) below and hit the "Enter" button;
+2. Copy as many of the **unique** inflections of the word that occurred most number of times and paste them in the box(es) below and hit the "Enter" button;
 """
 st.write(list_items)
 

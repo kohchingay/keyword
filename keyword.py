@@ -168,7 +168,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     if st.session_state.input_values[0]:
-        st.dataframe(df, column_config={"Percentage": {"alignment": "center"}.set_index('Book')}
+        st.dataframe(df, column_config={"Percentage": {"alignment": "center"}}
     )
 
 with col2:

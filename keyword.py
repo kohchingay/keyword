@@ -12,7 +12,8 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
-
+from PIL import Image
+image = Image.open('banner.png')
 st.image(image, caption='SBLNT Keyword Search', width=None, use_column_width="auto")
 
 st.write("This website works on the SBL Greek New Testament text available online at sites such as") 

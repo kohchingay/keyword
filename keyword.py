@@ -186,7 +186,6 @@ wordcount_3 = 0
 wordcount_4 = 0
 wordcount_5 = 0
 wordcount_6 = 0
-
 if word_1:
     wordcount_1 += Mt.count(word_1) + Mk.count(word_1) + Lk.count(word_1) + Jn.count(word_1) + Ac.count(word_1) + Ro.count(word_1) + CoA.count(word_1) + CoB.count(word_1) + Ga.count(word_1) + Eph.count(word_1) + Php.count(word_1) + Col.count(word_1) + ThA.count(word_1) + ThB.count(word_1) + TiA.count(word_1) + TiB.count(word_1) + Tit.count(word_1) + Phm.count(word_1) + Heb.count(word_1) + Jas.count(word_1) + PeA.count(word_1) + PeB.count(word_1) + JnA.count(word_1) + JnB.count(word_1) + JnC.count(word_1) + Jud.count(word_1) + Re.count(word_1)
 if word_2:
@@ -199,7 +198,6 @@ if word_5:
     wordcount_5 += Mt.count(word_5) + Mk.count(word_5) + Lk.count(word_5) + Jn.count(word_5) + Ac.count(word_5) + Ro.count(word_5) + CoA.count(word_5) + CoB.count(word_5) + Ga.count(word_5) + Eph.count(word_5) + Php.count(word_5) + Col.count(word_5) + ThA.count(word_5) + ThB.count(word_5) + TiA.count(word_5) + TiB.count(word_5) + Tit.count(word_5) + Phm.count(word_5) + Heb.count(word_5) + Jas.count(word_5) + PeA.count(word_5) + PeB.count(word_5) + JnA.count(word_5) + JnB.count(word_5) + JnC.count(word_5) + Jud.count(word_5) + Re.count(word_5)
 if word_6:
     wordcount_6 += Mt.count(word_6) + Mk.count(word_6) + Lk.count(word_6) + Jn.count(word_6) + Ac.count(word_6) + Ro.count(word_6) + CoA.count(word_6) + CoB.count(word_6) + Ga.count(word_6) + Eph.count(word_6) + Php.count(word_6) + Col.count(word_6) + ThA.count(word_6) + ThB.count(word_6) + TiA.count(word_6) + TiB.count(word_6) + Tit.count(word_6) + Phm.count(word_6) + Heb.count(word_6) + Jas.count(word_6) + PeA.count(word_6) + PeB.count(word_6) + JnA.count(word_6) + JnB.count(word_6) + JnC.count(word_6) + Jud.count(word_6) + Re.count(word_6)
-
 total_wordcount  = wordcount_1 + wordcount_2 + wordcount_3 + wordcount_4 + wordcount_5 + wordcount_6
 """
 

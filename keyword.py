@@ -64,17 +64,6 @@ wordcount_3Jn = 0
 wordcount_Jud = 0
 wordcount_Re = 0
 
-# Display input fields
-for i in range(st.session_state.num_inputs):
-    st.session_state.input_values[i] = st.text_input(
-        f"Inflection {i+1}", 
-        value=st.session_state.input_values[i], 
-        key=f"text_input_{i}"
-
-        wordcount_Mt += Mt.count(input_values[i])
-        wordcount_Mk += Mk.count(input_values[i])
-    )
-
 _="""
 colA, colB, colC = st.columns([2, 2, 2])
 with colA:
@@ -151,6 +140,43 @@ wordcount_Jud = Jud.count(word_1) + Jud.count(word_2) + Jud.count(word_3) + Jud.
 wordcount_Re = Re.count(word_1) + Re.count(word_2) + Re.count(word_3) + Re.count(word_4) + Re.count(word_5) + Re.count(word_6)
 """
 
+# Display input fields
+for i in range(st.session_state.num_inputs):
+    st.session_state.input_values[i] = st.text_input(
+        f"Inflection {i+1}", 
+        value=st.session_state.input_values[i], 
+        key=f"text_input_{i}"
+
+        wordcount_Mt += Mt.count(input_values[i])
+        wordcount_Mk += Mk.count(input_values[i])
+        wordcount_Lk += Lk.count(input_values[i])
+        wordcount_Jn += Jn.count(input_values[i])
+        wordcount_Ac += Ac.count(input_values[i])
+        wordcount_Ro += Ro.count(input_values[i])
+        wordcount_1Co += CoA.count(input_values[i])
+        wordcount_2Co += CoB.count(input_values[i])
+        wordcount_Ga += Ga.count(input_values[i])
+        wordcount_Eph += Eph.count(input_values[i])
+        wordcount_Php += Php.count(input_values[i])
+        wordcount_Col += Col.count(input_values[i])
+        wordcount_1Th += ThA.count(input_values[i])
+        wordcount_2Th += ThB.count(input_values[i])
+        wordcount_1Ti += TiA.count(input_values[i])
+        wordcount_2Ti += TiB.count(input_values[i])
+        wordcount_Tit += Tit.count(input_values[i])
+        wordcount_Phm += Phm.count(input_values[i])
+        wordcount_Heb += Heb.count(input_values[i])
+        wordcount_Jas += Jas.count(input_values[i])
+        wordcount_1Ti += TiA.count(input_values[i])
+        wordcount_1Pe += PeA.count(input_values[i])
+        wordcount_2Pe += PeB.count(input_values[i])
+        wordcount_1Jn += JnA.count(input_values[i])
+        wordcount_2Jn += JnB.count(input_values[i])
+        wordcount_3Jn += JnC.count(input_values[i])
+        wordcount_Jud += Jud.count(input_values[i])
+        wordcount_Re += Re.count(input_values[i])
+    )
+
 wordcount_nt = wordcount_Mt + wordcount_Mk + wordcount_Lk + wordcount_Jn + wordcount_Ac + wordcount_Ro + wordcount_1Co + wordcount_2Co + wordcount_Ga + wordcount_Eph + wordcount_Php + wordcount_Col + wordcount_1Th + wordcount_2Th + wordcount_1Ti + wordcount_2Ti + wordcount_Tit + wordcount_Phm + wordcount_Heb + wordcount_Jas + wordcount_1Pe + wordcount_2Pe + wordcount_1Jn + wordcount_2Jn + wordcount_3Jn + wordcount_Jud + wordcount_Re
 
 _="""
@@ -177,10 +203,10 @@ if word_6:
 total_wordcount  = wordcount_1 + wordcount_2 + wordcount_3 + wordcount_4 + wordcount_5 + wordcount_6
 """
 
-if word_1:
-        st.write(f"Number of times {word_1} appears in the inflections above in the NT is {wordcount_nt}.\n\n")
+if input_values[1]:
+        st.write(f"Number of times {input_values[1]} appears in the inflections above in the NT is {wordcount_nt}.\n\n")
 
-if word_1:
+if input_values[1]:
         df = pd.DataFrame(
             {
             "Book": ["Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],
@@ -214,13 +240,13 @@ if word_1:
 col1, col2 = st.columns(2)
 
 with col1:
-    if word_1:
+    if input_values[1]:
         st.dataframe(df, column_config={"Percentage": {"alignment": "center"}}
     ).set_index('Book')
 
 with col2:
-    if word_1:
-        st.title(f"{word_1}")
+    if input_values[1]:
+        st.title(f"{input_values[1]}")
         st.altair_chart(c)
         
 # In[ ]:

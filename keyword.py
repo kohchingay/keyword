@@ -29,11 +29,6 @@ custom_html = """
 </style>
 """
 
-from PIL import Image
-image = Image.open('banner.jpeg')
-
-st.image(image, width=800, caption='SBLNT Keyword Search')
-
 st.write("This website works on the SBL Greek New Testament text available online at sites such as") 
 st.markdown('[https://www.biblewebapp.com/study/](https://www.biblewebapp.com/study/)')
 

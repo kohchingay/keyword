@@ -179,27 +179,6 @@ for i in range(st.session_state.num_inputs):
 
 wordcount_nt = wordcount_Mt + wordcount_Mk + wordcount_Lk + wordcount_Jn + wordcount_Ac + wordcount_Ro + wordcount_1Co + wordcount_2Co + wordcount_Ga + wordcount_Eph + wordcount_Php + wordcount_Col + wordcount_1Th + wordcount_2Th + wordcount_1Ti + wordcount_2Ti + wordcount_Tit + wordcount_Phm + wordcount_Heb + wordcount_Jas + wordcount_1Pe + wordcount_2Pe + wordcount_1Jn + wordcount_2Jn + wordcount_3Jn + wordcount_Jud + wordcount_Re
 
-_="""
-wordcount_1 = 0
-wordcount_2 = 0
-wordcount_3 = 0
-wordcount_4 = 0
-wordcount_5 = 0
-wordcount_6 = 0
-if word_1:
-    wordcount_1 += Mt.count(word_1) + Mk.count(word_1) + Lk.count(word_1) + Jn.count(word_1) + Ac.count(word_1) + Ro.count(word_1) + CoA.count(word_1) + CoB.count(word_1) + Ga.count(word_1) + Eph.count(word_1) + Php.count(word_1) + Col.count(word_1) + ThA.count(word_1) + ThB.count(word_1) + TiA.count(word_1) + TiB.count(word_1) + Tit.count(word_1) + Phm.count(word_1) + Heb.count(word_1) + Jas.count(word_1) + PeA.count(word_1) + PeB.count(word_1) + JnA.count(word_1) + JnB.count(word_1) + JnC.count(word_1) + Jud.count(word_1) + Re.count(word_1)
-if word_2:
-    wordcount_2 += Mt.count(word_2) + Mk.count(word_2) + Lk.count(word_2) + Jn.count(word_2) + Ac.count(word_2) + Ro.count(word_2) + CoA.count(word_2) + CoB.count(word_2) + Ga.count(word_2) + Eph.count(word_2) + Php.count(word_2) + Col.count(word_2) + ThA.count(word_2) + ThB.count(word_2) + TiA.count(word_2) + TiB.count(word_2) + Tit.count(word_2) + Phm.count(word_2) + Heb.count(word_2) + Jas.count(word_2) + PeA.count(word_2) + PeB.count(word_2) + JnA.count(word_2) + JnB.count(word_2) + JnC.count(word_2) + Jud.count(word_2) + Re.count(word_2)
-if word_3:
-    wordcount_3 += Mt.count(word_3) + Mk.count(word_3) + Lk.count(word_3) + Jn.count(word_3) + Ac.count(word_3) + Ro.count(word_3) + CoA.count(word_3) + CoB.count(word_3) + Ga.count(word_3) + Eph.count(word_3) + Php.count(word_3) + Col.count(word_3) + ThA.count(word_3) + ThB.count(word_3) + TiA.count(word_3) + TiB.count(word_3) + Tit.count(word_3) + Phm.count(word_3) + Heb.count(word_3) + Jas.count(word_3) + PeA.count(word_3) + PeB.count(word_3) + JnA.count(word_3) + JnB.count(word_3) + JnC.count(word_3) + Jud.count(word_3) + Re.count(word_3)
-if word_4:
-    wordcount_4 += Mt.count(word_4) + Mk.count(word_4) + Lk.count(word_4) + Jn.count(word_4) + Ac.count(word_4) + Ro.count(word_4) + CoA.count(word_4) + CoB.count(word_4) + Ga.count(word_4) + Eph.count(word_4) + Php.count(word_4) + Col.count(word_4) + ThA.count(word_4) + ThB.count(word_4) + TiA.count(word_4) + TiB.count(word_4) + Tit.count(word_4) + Phm.count(word_4) + Heb.count(word_4) + Jas.count(word_4) + PeA.count(word_4) + PeB.count(word_4) + JnA.count(word_4) + JnB.count(word_4) + JnC.count(word_4) + Jud.count(word_4) + Re.count(word_4)
-if word_5:
-    wordcount_5 += Mt.count(word_5) + Mk.count(word_5) + Lk.count(word_5) + Jn.count(word_5) + Ac.count(word_5) + Ro.count(word_5) + CoA.count(word_5) + CoB.count(word_5) + Ga.count(word_5) + Eph.count(word_5) + Php.count(word_5) + Col.count(word_5) + ThA.count(word_5) + ThB.count(word_5) + TiA.count(word_5) + TiB.count(word_5) + Tit.count(word_5) + Phm.count(word_5) + Heb.count(word_5) + Jas.count(word_5) + PeA.count(word_5) + PeB.count(word_5) + JnA.count(word_5) + JnB.count(word_5) + JnC.count(word_5) + Jud.count(word_5) + Re.count(word_5)
-if word_6:
-    wordcount_6 += Mt.count(word_6) + Mk.count(word_6) + Lk.count(word_6) + Jn.count(word_6) + Ac.count(word_6) + Ro.count(word_6) + CoA.count(word_6) + CoB.count(word_6) + Ga.count(word_6) + Eph.count(word_6) + Php.count(word_6) + Col.count(word_6) + ThA.count(word_6) + ThB.count(word_6) + TiA.count(word_6) + TiB.count(word_6) + Tit.count(word_6) + Phm.count(word_6) + Heb.count(word_6) + Jas.count(word_6) + PeA.count(word_6) + PeB.count(word_6) + JnA.count(word_6) + JnB.count(word_6) + JnC.count(word_6) + Jud.count(word_6) + Re.count(word_6)
-total_wordcount  = wordcount_1 + wordcount_2 + wordcount_3 + wordcount_4 + wordcount_5 + wordcount_6
-"""
 
 if input_values[1]:
         st.write(f"Number of times {input_values[1]} appears in the inflections above in the NT is {wordcount_nt}.\n\n")

@@ -16,7 +16,7 @@ import numpy as np
 st.set_page_config(layout="centered")
 st.image("banner.jpeg", use_container_width="auto")
 
-st.write("This website works on the **SBL Greek New Testament** text. Find the Greek word (from SBLNT text) that you would like to work on from https://www.biblewebapp.com/study/ and do the following:") 
+st.write("This website works on the **SBL Greek New Testament** text. For keyword search in this website, find the Greek word (from SBLNT text) that you would like to work on from https://www.biblewebapp.com/study/ and do the following:") 
 list_items = """
 1. Click on the Greek word and select "**Find all occurrences**"; 
 2. Copy as many of the **unique** inflections of the word that occurred most number of times and paste them in the box(es) below and hit the "Enter" button;

@@ -13,9 +13,21 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 
-st.set_page_config(layout="wide") # Custom HTML/CSS for the banner 
+st.set_page_config(layout="wide") # Custom HTML/CSS for the banner
+custom_html = """
 <div class="banner"> <img src="banner.jpeg" alt="Banner Image"> </div>
-
+<style>
+    .banner {
+        width: 160%;
+        height: 200px;
+        overflow: hidden;
+    }
+    .banner img {
+        width: 100%;
+        object-fit: cover;
+    }
+</style>
+"""
 
 from PIL import Image
 image = Image.open('banner.jpeg')

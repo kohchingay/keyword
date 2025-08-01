@@ -145,7 +145,7 @@ for i in range(st.session_state.num_inputs):
     st.session_state.input_values[i] = st.text_input(
         f"Inflection {i+1}", 
         value=st.session_state.input_values[i], 
-        key=f"text_input_{i}"
+        key=f"text_input_{i}",
 
         wordcount_Mt += Mt.count(input_values[i])
         wordcount_Mk += Mk.count(input_values[i])

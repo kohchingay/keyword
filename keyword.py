@@ -15,7 +15,7 @@ import numpy as np
 from PIL import Image
 image = Image.open('banner.png')
 
-st.image(image, width=1000, caption='SBLNT Keyword Search')
+st.image(image, width=800, caption='SBLNT Keyword Search')
 
 st.write("This website works on the SBL Greek New Testament text available online at sites such as") 
 st.markdown('[https://www.biblewebapp.com/study/](https://www.biblewebapp.com/study/)')

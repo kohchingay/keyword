@@ -24,6 +24,7 @@ list_items = """
 """
 st.write(list_items)
 
+import string
 inflections_list = []
 
 # Display the text areas for each feature

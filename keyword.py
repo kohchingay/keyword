@@ -13,7 +13,7 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 
-st.write("This website refers to the SBL Greek New Testament text available online at sites such as") 
+st.write("This website works on the SBL Greek New Testament text available online at sites such as") 
 st.markdown('[https://www.biblewebapp.com/study/](https://www.biblewebapp.com/study/)')
 
 st.write("Find the Greek word that you would like to work on from https://www.biblewebapp.com/study/ and do the following:") 

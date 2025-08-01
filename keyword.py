@@ -131,7 +131,7 @@ wordcount_nt = wordcount_Mt + wordcount_Mk + wordcount_Lk + wordcount_Jn + wordc
 
 
 if st.session_state.input_values[0]:
-        st.write(f"Number of times {input_values[1]} appears in the inflections above in the NT is {wordcount_nt}.\n\n")
+        st.write(f"Number of times {st.session_state.input_values[0]} appears in the inflections above in the NT is {wordcount_nt}.\n\n")
 
 if st.session_state.input_values[0]:
         df = pd.DataFrame(

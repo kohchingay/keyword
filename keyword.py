@@ -16,7 +16,14 @@ import numpy as np
 st.write("This website refers to the SBL Greek New Testament text available online at sites such as") 
 st.markdown('[https://www.biblewebapp.com/study/](https://www.biblewebapp.com/study/)')
 
-st.write("Find the Greek word that you would like to work on from https://www.biblewebapp.com/study/ and do the following: \n(1) Click on the Greek word and **Find all occurrences**; \n(2) Copy up to 6 inflections of the word that occurred most number of times and paste them individually in each of the boxes below and hit the Enter button; \n(3) if there is any empty boxes remaining, input the ampersand (&) symbol and hit the Enter button.")
+st.write("Find the Greek word that you would like to work on from https://www.biblewebapp.com/study/ and do the following:") 
+list_items = """
+1. Click on the Greek word and **Find all occurrences**; 
+2. Copy up to 6 inflections of the word that occurred most number of times and paste them individually in each of the boxes below and hit the "Enter" button;
+3. If there are any empty boxes remaining, input the ampersand (&) symbol and hit the "Enter" button.
+"""
+
+st.write(list_items)
 
 word_1 = st.text_input()
 word_2 = st.text_input()

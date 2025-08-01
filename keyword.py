@@ -26,19 +26,19 @@ st.write(list_items)
 
 colA, colB, colC = st.columns([2, 2, 2])
 with colA:
-        name = st.text_input("Enter inflection with the highest occurrences")
+        word_1 = st.text_input("Enter inflection with the highest occurrences")
 with colB:
-        age = st.text_input("Enter inflection with 2nd highest occurrences")
+        word_2 = st.text_input("Enter inflection with 2nd highest occurrences")
 with colC:
-        age = st.text_input("Enter inflection with 3rd highest occurrences")
+        word_3 = st.text_input("Enter inflection with 3rd highest occurrences")
 
-colE, colF, colG = st.columns([2, 2, 2])
+colD, colE, colF = st.columns([2, 2, 2])
 with colD:
-        name = st.text_input("Enter inflection with 4th highest occurrences")
+        word_4 = st.text_input("Enter inflection with 4th highest occurrences")
 with colE:
-        age = st.text_input("Enter inflection with 5th highest occurrences")
+        word_5 = st.text_input("Enter inflection with 5th highest occurrences")
 with colF:
-        age = st.text_input("Enter inflection with 6th highest occurrences")
+        word_6 = st.text_input("Enter inflection with 6th highest occurrences")
 
 Mt = open("1-Mt.txt").read()
 Mk = open("2-Mk.txt").read()

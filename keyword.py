@@ -13,7 +13,7 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 from PIL import Image
-image = Image.open('banner.png')
+image = Image.open('banner.jpeg')
 
 st.image(image, width=800, caption='SBLNT Keyword Search')
 

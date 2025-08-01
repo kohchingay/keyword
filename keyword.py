@@ -28,6 +28,7 @@ custom_html = """
     }
 </style>
 """
+st.components.v1.html(custom_html)
 
 st.write("This website works on the SBL Greek New Testament text available online at sites such as") 
 st.markdown('[https://www.biblewebapp.com/study/](https://www.biblewebapp.com/study/)')

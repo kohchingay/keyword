@@ -121,34 +121,35 @@ if word_6:
 wordcount_nt = wordcount_1 + wordcount_2 + wordcount_3 + wordcount_4 + wordcount_5 + wordcount_6
 
 if word_1:
-    st.write(f"Number of times {word_1} appears in the inflections above in the NT is {wordcount_nt}.\n\n")
+        st.write(f"Number of times {word_1} appears in the inflections above in the NT is {wordcount_nt}.\n\n")
 
-df = pd.DataFrame(
-    {
-    "Book": ["Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],
-    "Word Count": [{wordcount_Mt}, {wordcount_Mk}, {wordcount_Lk}, {wordcount_Jn}, {wordcount_Ac}, {wordcount_Ro}, {wordcount_1Co}, {wordcount_2Co}, {wordcount_Ga}, {wordcount_Eph}, {wordcount_Php}, {wordcount_Col}, {wordcount_1Th}, {wordcount_2Th}, {wordcount_1Ti}, {wordcount_2Ti}, {wordcount_Tit}, {wordcount_Phm}, {wordcount_Heb}, {wordcount_Jas}, {wordcount_1Pe}, {wordcount_2Pe}, {wordcount_1Jn}, {wordcount_2Jn}, {wordcount_3Jn}, {wordcount_Jud}, {wordcount_Re}],
-    "Percentage": [round(100*wordcount_Mt/wordcount_nt), round(100*wordcount_Mk/wordcount_nt), round(100*wordcount_Lk/wordcount_nt), round(100*wordcount_Jn/wordcount_nt), round(100*wordcount_Ac/wordcount_nt), round(100*wordcount_Ro/wordcount_nt), round(100*wordcount_1Co/wordcount_nt), round(100*wordcount_2Co/wordcount_nt), round(100*wordcount_Ga/wordcount_nt), round(100*wordcount_Eph/wordcount_nt), round(100*wordcount_Php/wordcount_nt), round(100*wordcount_Col/wordcount_nt), round(100*wordcount_1Th/wordcount_nt), round(100*wordcount_2Th/wordcount_nt), round(100*wordcount_1Ti/wordcount_nt), round(100*wordcount_2Ti/wordcount_nt), round(100*wordcount_Tit/wordcount_nt), round(100*wordcount_Phm/wordcount_nt), round(100*wordcount_Heb/wordcount_nt), round(100*wordcount_Jas/wordcount_nt), round(100*wordcount_1Pe/wordcount_nt), round(100*wordcount_2Pe/wordcount_nt), round(100*wordcount_1Jn/wordcount_nt), round(100*wordcount_2Jn/wordcount_nt), round(100*wordcount_3Jn/wordcount_nt), round(100*wordcount_Jud/wordcount_nt), round(100*wordcount_Re/wordcount_nt)]
-    }
-)
+        df = pd.DataFrame(
+            {
+            "Book": ["Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],
+            "Word Count": [{wordcount_Mt}, {wordcount_Mk}, {wordcount_Lk}, {wordcount_Jn}, {wordcount_Ac}, {wordcount_Ro}, {wordcount_1Co}, {wordcount_2Co}, {wordcount_Ga}, {wordcount_Eph}, {wordcount_Php}, {wordcount_Col}, {wordcount_1Th}, {wordcount_2Th}, {wordcount_1Ti}, {wordcount_2Ti}, {wordcount_Tit}, {wordcount_Phm}, {wordcount_Heb}, {wordcount_Jas}, {wordcount_1Pe}, {wordcount_2Pe}, {wordcount_1Jn}, {wordcount_2Jn}, {wordcount_3Jn}, {wordcount_Jud}, {wordcount_Re}],
+            "Percentage": [round(100*wordcount_Mt/wordcount_nt), round(100*wordcount_Mk/wordcount_nt), round(100*wordcount_Lk/wordcount_nt), round(100*wordcount_Jn/wordcount_nt), round(100*wordcount_Ac/wordcount_nt), round(100*wordcount_Ro/wordcount_nt), round(100*wordcount_1Co/wordcount_nt), round(100*wordcount_2Co/wordcount_nt), round(100*wordcount_Ga/wordcount_nt), round(100*wordcount_Eph/wordcount_nt), round(100*wordcount_Php/wordcount_nt), round(100*wordcount_Col/wordcount_nt), round(100*wordcount_1Th/wordcount_nt), round(100*wordcount_2Th/wordcount_nt), round(100*wordcount_1Ti/wordcount_nt), round(100*wordcount_2Ti/wordcount_nt), round(100*wordcount_Tit/wordcount_nt), round(100*wordcount_Phm/wordcount_nt), round(100*wordcount_Heb/wordcount_nt), round(100*wordcount_Jas/wordcount_nt), round(100*wordcount_1Pe/wordcount_nt), round(100*wordcount_2Pe/wordcount_nt), round(100*wordcount_1Jn/wordcount_nt), round(100*wordcount_2Jn/wordcount_nt), round(100*wordcount_3Jn/wordcount_nt), round(100*wordcount_Jud/wordcount_nt), round(100*wordcount_Re/wordcount_nt)]
+            }
+        )
     
 
 import altair as alt
 
 # Prepare your data
-source = pd.DataFrame({
-    "Book": ["Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],
-    "Percentage": [100*wordcount_Mt/wordcount_nt, 100*wordcount_Mk/wordcount_nt, 100*wordcount_Lk/wordcount_nt, 100*wordcount_Jn/wordcount_nt, 100*wordcount_Ac/wordcount_nt, 100*wordcount_Ro/wordcount_nt, 100*wordcount_1Co/wordcount_nt, 100*wordcount_2Co/wordcount_nt, 100*wordcount_Ga/wordcount_nt, 100*wordcount_Eph/wordcount_nt, 100*wordcount_Php/wordcount_nt, 100*wordcount_Col/wordcount_nt, 100*wordcount_1Th/wordcount_nt, 100*wordcount_2Th/wordcount_nt, 100*wordcount_1Ti/wordcount_nt, 100*wordcount_2Ti/wordcount_nt, 100*wordcount_Tit/wordcount_nt, 100*wordcount_Phm/wordcount_nt, 100*wordcount_Heb/wordcount_nt, 100*wordcount_Jas/wordcount_nt, 100*wordcount_1Pe/wordcount_nt, 100*wordcount_2Pe/wordcount_nt, 100*wordcount_1Jn/wordcount_nt, 100*wordcount_2Jn/wordcount_nt, 100*wordcount_3Jn/wordcount_nt, 100*wordcount_Jud/wordcount_nt, 100*wordcount_Re/wordcount_nt]
-})
+if word_1:
+        source = pd.DataFrame({
+            "Book": ["Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],
+            "Percentage": [100*wordcount_Mt/wordcount_nt, 100*wordcount_Mk/wordcount_nt, 100*wordcount_Lk/wordcount_nt, 100*wordcount_Jn/wordcount_nt, 100*wordcount_Ac/wordcount_nt, 100*wordcount_Ro/wordcount_nt, 100*wordcount_1Co/wordcount_nt, 100*wordcount_2Co/wordcount_nt, 100*wordcount_Ga/wordcount_nt, 100*wordcount_Eph/wordcount_nt, 100*wordcount_Php/wordcount_nt, 100*wordcount_Col/wordcount_nt, 100*wordcount_1Th/wordcount_nt, 100*wordcount_2Th/wordcount_nt, 100*wordcount_1Ti/wordcount_nt, 100*wordcount_2Ti/wordcount_nt, 100*wordcount_Tit/wordcount_nt, 100*wordcount_Phm/wordcount_nt, 100*wordcount_Heb/wordcount_nt, 100*wordcount_Jas/wordcount_nt, 100*wordcount_1Pe/wordcount_nt, 100*wordcount_2Pe/wordcount_nt, 100*wordcount_1Jn/wordcount_nt, 100*wordcount_2Jn/wordcount_nt, 100*wordcount_3Jn/wordcount_nt, 100*wordcount_Jud/wordcount_nt, 100*wordcount_Re/wordcount_nt]
+        })
 
 # Create the Altair donut chart
 
-c = alt.Chart(source).mark_arc(innerRadius=70).encode(
-    theta=alt.Theta(field="Percentage", type="quantitative"),
-    color=alt.Color(field="Book", type="nominal", title="Book"),
-    order=alt.Order(field="Percentage", sort="descending") # Optional: order arcs by value
-).properties(
-    title="Word Count"
-)
+        c = alt.Chart(source).mark_arc(innerRadius=70).encode(
+            theta=alt.Theta(field="Percentage", type="quantitative"),
+            color=alt.Color(field="Book", type="nominal", title="Book"),
+            order=alt.Order(field="Percentage", sort="descending") # Optional: order arcs by value
+        ).properties(
+            title="Word Count"
+        )
 
 # Display the chart in Streamlit
 

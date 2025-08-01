@@ -13,7 +13,7 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 
-st.set_page_config(layout="wide") # Custom HTML/CSS for the banner
+st.set_page_config(layout="centered") # Custom HTML/CSS for the banner
 custom_html = """
 <div class="banner"> <img src="banner.jpeg" alt="Banner Image"> </div>
 <style>

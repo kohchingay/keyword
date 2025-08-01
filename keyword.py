@@ -97,8 +97,8 @@ for i in range(st.session_state.num_inputs):
     st.session_state.input_values[i] = st.text_input(
         f"Inflection {i+1}", 
         value=st.session_state.input_values[i], 
-        key=f"text_input_{i}",
-    if st.session_state.input_values[1]:
+        key=f"text_input_{i}"
+   
     wordcount_Mt += Mt.count(st.session_state.input_values[i])
     wordcount_Mk += Mk.count(st.session_state.input_values[i])
     wordcount_Lk += Lk.count(st.session_state.input_values[i])

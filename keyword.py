@@ -14,7 +14,7 @@ import streamlit as st
 import numpy as np
 
 st.set_page_config(layout="centered")
-st.image("banner.jpeg", use_column_width=True)
+st.image("banner.jpeg", use_container_width="auto")
 
 st.write("This website works on the SBL Greek New Testament text available online at sites such as") 
 st.markdown('[https://www.biblewebapp.com/study/](https://www.biblewebapp.com/study/)')

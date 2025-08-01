@@ -36,12 +36,43 @@ if st.button("Add Another Inflection"):
     st.session_state.num_inputs += 1
     st.session_state.input_values.append("") # Add a new empty string for the new input
 
+wordcount_Mt = 0
+wordcount_Mk = 0
+wordcount_Lk = 0
+wordcount_Jn = 0
+wordcount_Ac = 0
+wordcount_Ro = 0
+wordcount_1Co = 0
+wordcount_2Co = 0
+wordcount_Ga = 0
+wordcount_Eph = 0
+wordcount_Php = 0
+wordcount_Col = 0
+wordcount_1Th = 0
+wordcount_2Th = 0
+wordcount_1Ti = 0
+wordcount_2Ti = 0
+wordcount_Tit = 0
+wordcount_Phm = 0
+wordcount_Heb = 0
+wordcount_Jas = 0
+wordcount_1Pe = 0
+wordcount_2Pe = 0
+wordcount_1Jn = 0
+wordcount_2Jn = 0
+wordcount_3Jn = 0
+wordcount_Jud = 0
+wordcount_Re = 0
+
 # Display input fields
 for i in range(st.session_state.num_inputs):
     st.session_state.input_values[i] = st.text_input(
         f"Inflection {i+1}", 
         value=st.session_state.input_values[i], 
         key=f"text_input_{i}"
+
+        wordcount_Mt += Mt.count(input_values[i])
+        wordcount_Mk += Mk.count(input_values[i])
     )
 
 _="""
@@ -90,6 +121,7 @@ JnC = open("25-3Jn.txt").read()
 Jud = open("26-Jud.txt").read()
 Re = open("27-Re.txt").read()
 
+_="""
 wordcount_Mt = Mt.count(word_1) + Mt.count(word_2) + Mt.count(word_3) + Mt.count(word_4) + Mt.count(word_5) + Mt.count(word_6)
 wordcount_Mk = Mk.count(word_1) + Mk.count(word_2) + Mk.count(word_3) + Mk.count(word_4) + Mk.count(word_5) + Mk.count(word_6)
 wordcount_Lk = Lk.count(word_1) + Lk.count(word_2) + Lk.count(word_3) + Lk.count(word_4) + Lk.count(word_5) + Lk.count(word_6)
@@ -117,6 +149,7 @@ wordcount_2Jn = JnB.count(word_1) + JnB.count(word_2) + JnB.count(word_3) + JnB.
 wordcount_3Jn = JnC.count(word_1) + JnC.count(word_2) + JnC.count(word_3) + JnC.count(word_4) + JnC.count(word_5) + JnC.count(word_6)
 wordcount_Jud = Jud.count(word_1) + Jud.count(word_2) + Jud.count(word_3) + Jud.count(word_4) + Jud.count(word_5) + Jud.count(word_6)
 wordcount_Re = Re.count(word_1) + Re.count(word_2) + Re.count(word_3) + Re.count(word_4) + Re.count(word_5) + Re.count(word_6)
+"""
 
 wordcount_nt = wordcount_Mt + wordcount_Mk + wordcount_Lk + wordcount_Jn + wordcount_Ac + wordcount_Ro + wordcount_1Co + wordcount_2Co + wordcount_Ga + wordcount_Eph + wordcount_Php + wordcount_Col + wordcount_1Th + wordcount_2Th + wordcount_1Ti + wordcount_2Ti + wordcount_Tit + wordcount_Phm + wordcount_Heb + wordcount_Jas + wordcount_1Pe + wordcount_2Pe + wordcount_1Jn + wordcount_2Jn + wordcount_3Jn + wordcount_Jud + wordcount_Re
 

@@ -12,6 +12,11 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
+
+st.set_page_config(layout="wide") # Custom HTML/CSS for the banner 
+    <div class="banner"> <img src="banner.jpeg" alt="Banner Image"> </div>
+
+
 from PIL import Image
 image = Image.open('banner.jpeg')
 

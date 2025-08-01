@@ -94,40 +94,38 @@ Re = open("27-Re.txt").read()
 
 # Display input fields
 for i in range(st.session_state.num_inputs):
-    st.session_state.input_values[i] = st.text_input(
-        f"Inflection {i+1}", 
-        value=st.session_state.input_values[i], 
-        key=f"text_input_{i}",
-   
-    wordcount_Mt += Mt.count("st.session_state.input_values[i]")
-    wordcount_Mk += Mk.count(st.session_state.input_values[i])
-    wordcount_Lk += Lk.count(st.session_state.input_values[i])
-    wordcount_Jn += Jn.count(st.session_state.input_values[i])
-    wordcount_Ac += Ac.count(st.session_state.input_values[i])
-    wordcount_Ro += Ro.count(st.session_state.input_values[i])
-    wordcount_1Co += CoA.count(st.session_state.input_values[i])
-    wordcount_2Co += CoB.count(st.session_state.input_values[i])
-    wordcount_Ga += Ga.count(st.session_state.input_values[i])
-    wordcount_Eph += Eph.count(st.session_state.input_values[i])
-    wordcount_Php += Php.count(st.session_state.input_values[i])
-    wordcount_Col += Col.count(st.session_state.input_values[i])
-    wordcount_1Th += ThA.count(st.session_state.input_values[i])
-    wordcount_2Th += ThB.count(st.session_state.input_values[i])
-    wordcount_1Ti += TiA.count(st.session_state.input_values[i])
-    wordcount_2Ti += TiB.count(st.session_state.input_values[i])
-    wordcount_Tit += Tit.count(st.session_state.input_values[i])
-    wordcount_Phm += Phm.count(st.session_state.input_values[i])
-    wordcount_Heb += Heb.count(st.session_state.input_values[i])
-    wordcount_Jas += Jas.count(st.session_state.input_values[i])
-    wordcount_1Ti += TiA.count(st.session_state.input_values[i])
-    wordcount_1Pe += PeA.count(st.session_state.input_values[i])
-    wordcount_2Pe += PeB.count(st.session_state.input_values[i])
-    wordcount_1Jn += JnA.count(st.session_state.input_values[i])
-    wordcount_2Jn += JnB.count(st.session_state.input_values[i])
-    wordcount_3Jn += JnC.count(st.session_state.input_values[i])
-    wordcount_Jud += Jud.count(st.session_state.input_values[i])
-    wordcount_Re += Re.count(st.session_state.input_values[i])
-    )
+    word = st.text_input(f"Inflection {i+1}, value=st.session_state.input_values[i], key=f"text_input_{i})
+    st.session_state.input_values[i] = word
+
+    if value.strip():
+    wordcount_Mt += Mt.count(word)
+    wordcount_Mk += Mk.count(word)
+    wordcount_Lk += Lk.count(word)
+    wordcount_Jn += Jn.count(word)
+    wordcount_Ac += Ac.count(word)
+    wordcount_Ro += Ro.count(word)
+    wordcount_1Co += CoA.count(word)
+    wordcount_2Co += CoB.count(word)
+    wordcount_Ga += Ga.count(word)
+    wordcount_Eph += Eph.count(word)
+    wordcount_Php += Php.count(word)
+    wordcount_Col += Col.count(word)
+    wordcount_1Th += ThA.count(word)
+    wordcount_2Th += ThB.count(word)
+    wordcount_1Ti += TiA.count(word)
+    wordcount_2Ti += TiB.count(word)
+    wordcount_Tit += Tit.count(word)
+    wordcount_Phm += Phm.count(word)
+    wordcount_Heb += Heb.count(word)
+    wordcount_Jas += Jas.count(word)
+    wordcount_1Ti += TiA.count(word)
+    wordcount_1Pe += PeA.count(word)
+    wordcount_2Pe += PeB.count(word)
+    wordcount_1Jn += JnA.count(word)
+    wordcount_2Jn += JnB.count(word)
+    wordcount_3Jn += JnC.count(word)
+    wordcount_Jud += Jud.count(word)
+    wordcount_Re += Re.count(word)
 
 wordcount_nt = wordcount_Mt + wordcount_Mk + wordcount_Lk + wordcount_Jn + wordcount_Ac + wordcount_Ro + wordcount_1Co + wordcount_2Co + wordcount_Ga + wordcount_Eph + wordcount_Php + wordcount_Col + wordcount_1Th + wordcount_2Th + wordcount_1Ti + wordcount_2Ti + wordcount_Tit + wordcount_Phm + wordcount_Heb + wordcount_Jas + wordcount_1Pe + wordcount_2Pe + wordcount_1Jn + wordcount_2Jn + wordcount_3Jn + wordcount_Jud + wordcount_Re
 

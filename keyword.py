@@ -118,8 +118,9 @@ wordcount_3Jn = JnC.count(word_1) + JnC.count(word_2) + JnC.count(word_3) + JnC.
 wordcount_Jud = Jud.count(word_1) + Jud.count(word_2) + Jud.count(word_3) + Jud.count(word_4) + Jud.count(word_5) + Jud.count(word_6)
 wordcount_Re = Re.count(word_1) + Re.count(word_2) + Re.count(word_3) + Re.count(word_4) + Re.count(word_5) + Re.count(word_6)
 
-total_wordcount = wordcount_Mt + wordcount_Mk + wordcount_Lk + wordcount_Jn + wordcount_Ac + wordcount_Ro + wordcount_1Co + wordcount_2Co + wordcount_Ga + wordcount_Eph + wordcount_Php + wordcount_Col + wordcount_1Th + wordcount_2Th + wordcount_1Ti + wordcount_2Ti + wordcount_Tit + wordcount_Phm + wordcount_Heb + wordcount_Jas + wordcount_1Pe + wordcount_2Pe + wordcount_1Jn + wordcount_2Jn + wordcount_3Jn + wordcount_Jud + wordcount_Re
+wordcount_nt = wordcount_Mt + wordcount_Mk + wordcount_Lk + wordcount_Jn + wordcount_Ac + wordcount_Ro + wordcount_1Co + wordcount_2Co + wordcount_Ga + wordcount_Eph + wordcount_Php + wordcount_Col + wordcount_1Th + wordcount_2Th + wordcount_1Ti + wordcount_2Ti + wordcount_Tit + wordcount_Phm + wordcount_Heb + wordcount_Jas + wordcount_1Pe + wordcount_2Pe + wordcount_1Jn + wordcount_2Jn + wordcount_3Jn + wordcount_Jud + wordcount_Re
 
+_="""
 wordcount_1 = 0
 wordcount_2 = 0
 wordcount_3 = 0
@@ -140,7 +141,8 @@ if word_5:
 if word_6:
     wordcount_6 += Mt.count(word_6) + Mk.count(word_6) + Lk.count(word_6) + Jn.count(word_6) + Ac.count(word_6) + Ro.count(word_6) + CoA.count(word_6) + CoB.count(word_6) + Ga.count(word_6) + Eph.count(word_6) + Php.count(word_6) + Col.count(word_6) + ThA.count(word_6) + ThB.count(word_6) + TiA.count(word_6) + TiB.count(word_6) + Tit.count(word_6) + Phm.count(word_6) + Heb.count(word_6) + Jas.count(word_6) + PeA.count(word_6) + PeB.count(word_6) + JnA.count(word_6) + JnB.count(word_6) + JnC.count(word_6) + Jud.count(word_6) + Re.count(word_6)
 
-wordcount_nt = wordcount_1 + wordcount_2 + wordcount_3 + wordcount_4 + wordcount_5 + wordcount_6
+total_wordcount  = wordcount_1 + wordcount_2 + wordcount_3 + wordcount_4 + wordcount_5 + wordcount_6
+"""
 
 if word_1:
         st.write(f"Number of times {word_1} appears in the inflections above in the NT is {wordcount_nt}.\n\n")
@@ -181,7 +183,7 @@ col1, col2 = st.columns(2)
 with col1:
     if word_1:
         st.dataframe(df, column_config={"Percentage": {"alignment": "center"}}
-    )
+    ).set_index('Book')
 
 with col2:
     if word_1:

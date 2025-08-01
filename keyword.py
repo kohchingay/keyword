@@ -98,6 +98,7 @@ for i in range(st.session_state.num_inputs):
         f"Inflection {i+1}", 
         value=st.session_state.input_values[i], 
         key=f"text_input_{i}",
+    if st.session_state.input_values[1]:
     wordcount_Mt += Mt.count(st.session_state.input_values[i])
     wordcount_Mk += Mk.count(st.session_state.input_values[i])
     wordcount_Lk += Lk.count(st.session_state.input_values[i])
@@ -131,10 +132,10 @@ for i in range(st.session_state.num_inputs):
 wordcount_nt = wordcount_Mt + wordcount_Mk + wordcount_Lk + wordcount_Jn + wordcount_Ac + wordcount_Ro + wordcount_1Co + wordcount_2Co + wordcount_Ga + wordcount_Eph + wordcount_Php + wordcount_Col + wordcount_1Th + wordcount_2Th + wordcount_1Ti + wordcount_2Ti + wordcount_Tit + wordcount_Phm + wordcount_Heb + wordcount_Jas + wordcount_1Pe + wordcount_2Pe + wordcount_1Jn + wordcount_2Jn + wordcount_3Jn + wordcount_Jud + wordcount_Re
 
 
-if input_values[1]:
+if st.session_state.input_values[1]:
         st.write(f"Number of times {input_values[1]} appears in the inflections above in the NT is {wordcount_nt}.\n\n")
 
-if input_values[1]:
+if st.session_state.input_values[1]:
         df = pd.DataFrame(
             {
             "Book": ["Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],
@@ -147,7 +148,7 @@ if input_values[1]:
 import altair as alt
 
 # Prepare your data
-if word_1:
+if st.session_state.input_values[1]:
         source = pd.DataFrame({
             "Book": ["Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],
             "Percentage": [100*wordcount_Mt/wordcount_nt, 100*wordcount_Mk/wordcount_nt, 100*wordcount_Lk/wordcount_nt, 100*wordcount_Jn/wordcount_nt, 100*wordcount_Ac/wordcount_nt, 100*wordcount_Ro/wordcount_nt, 100*wordcount_1Co/wordcount_nt, 100*wordcount_2Co/wordcount_nt, 100*wordcount_Ga/wordcount_nt, 100*wordcount_Eph/wordcount_nt, 100*wordcount_Php/wordcount_nt, 100*wordcount_Col/wordcount_nt, 100*wordcount_1Th/wordcount_nt, 100*wordcount_2Th/wordcount_nt, 100*wordcount_1Ti/wordcount_nt, 100*wordcount_2Ti/wordcount_nt, 100*wordcount_Tit/wordcount_nt, 100*wordcount_Phm/wordcount_nt, 100*wordcount_Heb/wordcount_nt, 100*wordcount_Jas/wordcount_nt, 100*wordcount_1Pe/wordcount_nt, 100*wordcount_2Pe/wordcount_nt, 100*wordcount_1Jn/wordcount_nt, 100*wordcount_2Jn/wordcount_nt, 100*wordcount_3Jn/wordcount_nt, 100*wordcount_Jud/wordcount_nt, 100*wordcount_Re/wordcount_nt]
@@ -168,12 +169,12 @@ if word_1:
 col1, col2 = st.columns(2)
 
 with col1:
-    if input_values[1]:
+    if st.session_state.input_values[1]:
         st.dataframe(df, column_config={"Percentage": {"alignment": "center"}}
     ).set_index('Book')
 
 with col2:
-    if input_values[1]:
+    if st.session_state.input_values[1]:
         st.title(f"{input_values[1]}")
         st.altair_chart(c)
         

@@ -24,6 +24,26 @@ list_items = """
 """
 st.write(list_items)
 
+inflections_list = []
+
+# Display the text areas for each feature
+for i in range(st.session_state.num_features):
+    word = st.text_area(
+        f"Paste the inflection of the word you have copied with the next highest occurrences here and hit the Enter button.",
+        placeholder=f"Feature {i + 1}:\n...",
+        height=100,
+        key=f'new_feature_{i}'
+    )
+    inflections_list.append(word)
+
+# Button to add more features
+if st.button("Add inflection"):
+    st.session_state.num_features += 1
+    
+# joining the input of features_list into a string.
+final_list = '\n'.join(inflections_list)
+
+_="""
 colA, colB, colC = st.columns([2, 2, 2])
 with colA:
         word_1 = st.text_input("Enter inflection with the highest occurrences")
@@ -39,6 +59,7 @@ with colE:
         word_5 = st.text_input("Enter inflection with 5th highest occurrences")
 with colF:
         word_6 = st.text_input("Enter inflection with 6th highest occurrences")
+"""
 
 Mt = open("1-Mt.txt").read()
 Mk = open("2-Mk.txt").read()

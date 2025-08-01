@@ -24,6 +24,31 @@ list_items = """
 """
 st.write(list_items)
 
+import streamlit as st
+
+if 'num_inputs' not in st.session_state:
+    st.session_state.num_inputs = 1
+if 'input_values' not in st.session_state:
+    st.session_state.input_values = [""] * st.session_state.num_inputs
+
+# Button to add more input fields
+if st.button("Add New Input"):
+    st.session_state.num_inputs += 1
+    st.session_state.input_values.append("") # Add a new empty string for the new input
+
+# Display input fields
+for i in range(st.session_state.num_inputs):
+    st.session_state.input_values[i] = st.text_input(
+        f"Input {i+1}", 
+        value=st.session_state.input_values[i], 
+        key=f"text_input_{i}"
+    )
+
+st.write("Current Input Values:")
+for i, value in enumerate(st.session_state.input_values):
+    st.write(f"Input {i+1}: {value}")
+
+
 import string
 inflections_list = []
 

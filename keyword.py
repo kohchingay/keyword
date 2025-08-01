@@ -16,8 +16,7 @@ import numpy as np
 st.set_page_config(layout="centered")
 st.image("banner.jpeg", use_container_width="auto")
 
-st.write("This website works on the SBL Greek New Testament text available online at sites such as") 
-st.markdown('[https://www.biblewebapp.com/study/](https://www.biblewebapp.com/study/)')
+st.write("This website works on the SBL Greek New Testament text available online at sites such as https://www.biblewebapp.com/study/") 
 
 st.write("Find the Greek word (from SBLNT text) that you would like to work on from https://www.biblewebapp.com/study/ and do the following:") 
 list_items = """

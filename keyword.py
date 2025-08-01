@@ -22,15 +22,15 @@ list_items = """
 2. Copy up to 6 inflections of the word that occurred most number of times and paste them individually in each of the boxes below and hit the "Enter" button;
 3. If there are any empty boxes remaining, input the ampersand (&) symbol and hit the "Enter" button.
 """
-
 st.write(list_items)
 
-word_1 = st.text_input()
-word_2 = st.text_input()
-word_3 = st.text_input()
-word_4 = st.text_input()
-word_5 = st.text_input()
-word_6 = st.text_input()
+# Getting user input
+word_1 = st.text_input('Highest occurring inflection')
+word_2 = st.text_input('2nd highest occurring inflection')
+word_3 = st.text_input('3rd highest occurring inflection')
+word_4 = st.text_input('4th highest occurring inflection')
+word_5 = st.text_input('5th highest occurring inflection')
+word_6 = st.text_input('6th highest occurring inflection')
 
 Mt = open("1-Mt.txt").read()
 Mk = open("2-Mk.txt").read()

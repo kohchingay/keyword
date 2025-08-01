@@ -123,6 +123,7 @@ wordcount_nt = wordcount_1 + wordcount_2 + wordcount_3 + wordcount_4 + wordcount
 if word_1:
         st.write(f"Number of times {word_1} appears in the inflections above in the NT is {wordcount_nt}.\n\n")
 
+if word_1:
         df = pd.DataFrame(
             {
             "Book": ["Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"],

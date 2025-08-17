@@ -35,6 +35,9 @@ if st.button("Add Another Inflection"):
     st.session_state.num_inputs += 1
     st.session_state.input_values.append("") # Add a new empty string for the new input
 
+    if st.button("Remove Inflection"):
+    st.session_state.num_inputs -= 1
+
 wordcount_Mt = 0
 wordcount_Mk = 0
 wordcount_Lk = 0
